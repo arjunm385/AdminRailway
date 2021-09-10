@@ -9,45 +9,45 @@ import { TrainService } from '../services/train.service';
 export class TrainformComponent implements OnInit {
 
   constructor(private trainService:TrainService) { }
-public train={
-  tid:'',
-  tno:'',
-  tname:'',
-  start:'',
-  stop:'',
-  date:'',
-  totalCoach:'',
-  acSleeperCoach:'',	 
-	 acSittingCoach:'',	 
-	 nonAcSleeperCoach:'',
-	 nonAcSittingCoach:'',
-	 totalAcSleeperSeat:'',	
-	 availAcSleeperSeat:'',
+// public train={
+//   tid:'',
+//   tno:'',
+//   tname:'',
+//   start:'',
+//   stop:'',
+//   date:'',
+//   totalCoach:'',
+//   acSleeperCoach:'',	 
+// 	 acSittingCoach:'',	 
+// 	 nonAcSleeperCoach:'',
+// 	 nonAcSittingCoach:'',
+// 	 totalAcSleeperSeat:'',	
+// 	 availAcSleeperSeat:'',
 
-	 totalAcSittingSeat:'',
+// 	 totalAcSittingSeat:'',
 	 
-   availAcSittingSeat:'',
+//    availAcSittingSeat:'',
 	 
-   totalNonAcSleeperSeat:'',
+//    totalNonAcSleeperSeat:'',
 	 
-   availNonAcSleeperSeat:'',
+//    availNonAcSleeperSeat:'',
 	 
-   totalNonAcSittingSeat:'',
+//    totalNonAcSittingSeat:'',
 	 
-   availNonAcSittingSeat:'',
+//    availNonAcSittingSeat:'',
 
-}
+// }
   ngOnInit(): void {
   }
-//from submit
-formSubmit(){
-  this.trainService.addTrain(this.train).subscribe(
-    (data:any)=>{
-      console.log(data);
-    },
-    (error:any)=>{
-      console.log(error);
-    }
-  );
-  }
+// //from submit
+// formSubmit(){
+//   this.trainService.addTrain(this.train).subscribe(
+//     (data:any)=>{
+//       console.log(data);
+//     },
+//     (error:any)=>{
+//       console.log(error);
+//     }
+//   );
+//   }
 }
