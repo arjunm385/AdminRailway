@@ -25,8 +25,9 @@ public class ServiceAdminImpl implements ServiceAdmin {
 	}
 	@Override
 	public List<TrainDetails> getTrainByName(String train_name) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return admindao.getTrainByName(train_name);
+//		return null;
 	}
 	@Override
 	public Optional<TrainDetails> getTrainById(int id) {
@@ -34,9 +35,8 @@ public class ServiceAdminImpl implements ServiceAdmin {
 		return admindao.findById(id);
 	}
 	@Override
-	public TrainDetails getTrainByDate(Date date) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<TrainDetails> getTrainByDate(Date date) {
+		return admindao.getTrainByDate(date);
 	}
 
 }
