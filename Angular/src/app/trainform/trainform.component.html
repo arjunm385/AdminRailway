@@ -1,9 +1,9 @@
-<!-- <div class="bootstrap-wrapper">
+<div class="bootstrap-wrapper">
     <div class="container">
         {{train|json}}
         <div class="row">
             <div class="col-lg-6">
-                <form (onSubmit)="formSubmit()">
+                <form (ngSubmit)="formSubmit()">
                     <div class="form-group">
                       <label for="exampleInputEmail1">Train Number</label>
                       <input [(ngModel)]="train.tno" class="form-control" name="tno">
@@ -78,6 +78,7 @@
                       </div>
                       <div class="form-group">
                         <button type="submit" class="btn btn-primary">Submit</button>
+                        <!-- <input type="submit" class="btn btn-primary"> -->
                       </div>
                     
                   </form>
@@ -85,8 +86,4 @@
             </div>
         </div>
     </div>
-</div> -->
-<<<<<<< HEAD
-<h1>3rgvgr</h1>
-=======
->>>>>>> 9af34c171a22c78c011f2fd47df08add0ccb28f2
+</div>

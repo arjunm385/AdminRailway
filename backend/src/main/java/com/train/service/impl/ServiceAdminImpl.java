@@ -17,8 +17,7 @@ public class ServiceAdminImpl implements ServiceAdmin {
     private AdminDao admindao;
 	@Override
 	public TrainDetails createTrain(TrainDetails traindetails) {
-		admindao.save(traindetails);
-		return null;
+		return admindao.save(traindetails);
 	}
 	@Override
 	public List<TrainDetails> getAllTrains() {

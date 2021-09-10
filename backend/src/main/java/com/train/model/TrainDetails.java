@@ -8,8 +8,6 @@ import javax.persistence.Id;
 
 import org.springframework.stereotype.Component;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-
 import lombok.Data;
 
 @Entity
