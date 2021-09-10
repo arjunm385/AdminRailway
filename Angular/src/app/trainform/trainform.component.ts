@@ -39,7 +39,11 @@ export class TrainformComponent implements OnInit {
 // }
   ngOnInit(): void {
   }
+<<<<<<< HEAD
 //from submit
+=======
+// //from submit
+>>>>>>> 9af34c171a22c78c011f2fd47df08add0ccb28f2
 // formSubmit(){
 //   this.trainService.addTrain(this.train).subscribe(
 //     (data:any)=>{
