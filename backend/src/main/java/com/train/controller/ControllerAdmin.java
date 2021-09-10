@@ -1,5 +1,6 @@
 package com.train.controller;
 
+import java.sql.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -35,9 +36,18 @@ public class ControllerAdmin {
 		return this.serviceAdmin.getAllTrains();
 	}
 	
-	@GetMapping("/get/{id}")
+	@GetMapping("/trainbyid/{id}")
 	public Optional<TrainDetails> getTrainById(@PathVariable("id")int id) {
 		return this.serviceAdmin.getTrainById(id);
+	}
+    
+	@GetMapping("/trainbyname/{train_name}")
+	public List<TrainDetails> getTrainByName(@PathVariable("train_name")String train_name) {
+		return this.serviceAdmin.getTrainByName(train_name);
+	}
+	@GetMapping("/trainbydate/{date}")
+	public List<TrainDetails> getTrainByDate(@PathVariable Date date) {
+		return this.serviceAdmin.getTrainByDate(date);
 	}
 
 }
