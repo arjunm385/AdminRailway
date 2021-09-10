@@ -31,7 +31,6 @@ public class ServiceAdminImpl implements ServiceAdmin {
 	}
 	@Override
 	public Optional<TrainDetails> getTrainById(int id) {
-		
 		return admindao.findById(id);
 	}
 	@Override
