@@ -8,8 +8,8 @@ import baseUrl from './helper';
 export class TrainService {
 
   constructor(private https: HttpClient) { }
-  public addTrain(train:any){
-    return this.https.post(`${baseUrl}/train/add`,train);
-  }
+  // public addTrain(train:any){
+  //   return this.https.post(`${baseUrl}/train/add`,train);
+  // }
 
 }
