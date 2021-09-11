@@ -6,11 +6,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TrainformComponent } from './trainform/trainform.component';
+import { SearchtrainComponent } from './searchtrain/searchtrain.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TrainformComponent
+    TrainformComponent,
+    SearchtrainComponent
   ],
   imports: [
     BrowserModule,

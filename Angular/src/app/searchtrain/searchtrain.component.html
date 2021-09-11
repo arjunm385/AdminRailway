@@ -1,0 +1,21 @@
+<div class="container" style="max-width : 600px; background-color: #C0C0C0;">
+    <form (ngSubmit)="searchtrain()">
+      <div class="form-group">
+        <label for="email">From:</label>
+        <input type="email" [(ngModel)]="search.start" class="form-control"  name="start"  required>
+      </div>
+      <br><br>
+      <div class="form-group">
+        <label for="pwd">To:</label>
+        <input type="text" class="form-control" [(ngModel)]="search.end" name="end"  required >
+      </div><br><br>
+      
+      <div class="form-group">
+        <label>Date:</label>
+        <input type="date" [(ngModel)]="search.date" name="date"> 
+      </div>
+      <br><br>
+      <button type="submit" class="btn btn-info">Check</button>
+    </form>
+  </div>
+  
