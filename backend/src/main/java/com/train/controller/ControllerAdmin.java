@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.train.model.RouteDetails;
 import com.train.model.TrainDetails;
 import com.train.service.ServiceAdmin;
 
@@ -54,7 +55,7 @@ public class ControllerAdmin {
 	
 /////////////////Route////////////////////////////////
 	@GetMapping("/route/all/{startpoint}/{lastpoint}")
-	public List<TrainDetails> getAllTrainsByroute(@PathVariable("startpoint") String startpoint,@PathVariable("lastpoint")String lastpoint) {
+	public List<RouteDetails> getAllTrainsByroute(@PathVariable("startpoint") String startpoint,@PathVariable("lastpoint")String lastpoint) {
 		return this.serviceAdmin.getAllTrainsByRoute(startpoint,lastpoint);
 	}
 }
