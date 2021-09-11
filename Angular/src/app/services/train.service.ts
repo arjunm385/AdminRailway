@@ -14,6 +14,6 @@ export class TrainService {
   }
   searchTrain(search:any){
     console.log("service layer"+search)
-    return this.https.get(`http://localhost:8787/train/route/all/`+search.start+`/`+search.end+`/`+search.date);
+    return this.https.get(`http://localhost:8787/train/route/allbydateloc/`+search.start+`/`+search.end+`/`+search.date);
   }
 }

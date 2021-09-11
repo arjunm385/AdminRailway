@@ -19,4 +19,6 @@ public interface ServiceAdmin {
 	public List<TrainDetails> getTrainByDate(Date date);
 
 	public List<RouteDetails> getAllTrainsByRoute(String startpoint, String lastpoint);
+
+	public List<RouteDetails> getAllTrainsByRouteDate(String start, String end, Date date);
 }

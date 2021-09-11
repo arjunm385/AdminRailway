@@ -58,4 +58,9 @@ public class ControllerAdmin {
 	public List<RouteDetails> getAllTrainsByroute(@PathVariable("startpoint") String startpoint,@PathVariable("lastpoint")String lastpoint) {
 		return this.serviceAdmin.getAllTrainsByRoute(startpoint,lastpoint);
 	}
+	
+	@GetMapping("/route/allbydateloc/{start}/{end}/{date}")
+	public List<RouteDetails> getAllTrainsByroutedate(@PathVariable("start") String start,@PathVariable("end")String end,@PathVariable("date") Date date) {
+		return this.serviceAdmin.getAllTrainsByRouteDate(start,end,date);
+	}
 }
