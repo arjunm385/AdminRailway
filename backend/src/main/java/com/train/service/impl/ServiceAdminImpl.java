@@ -41,5 +41,9 @@ public class ServiceAdminImpl implements ServiceAdmin {
 	public List<TrainDetails> getTrainByDate(Date date) {
 		return admindao.getTrainByDate(date);
 	}
+	@Override
+	public List<TrainDetails> getAllTrainsByRoute(String startpoint, String lastpoint) {
+		return routedao.getTrain(lastpoint, lastpoint);
+	}
 
 }
