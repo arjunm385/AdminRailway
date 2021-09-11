@@ -12,5 +12,8 @@ export class TrainService {
     console.log(train)
     return this.https.post(`${baseUrl}/train/add`,train);
   }
-
+  searchTrain(search:any){
+    console.log("service layer"+search)
+    return this.https.get(`http://localhost:8787/train/route/all/`+search.start+`/`+search.end+`/`+search.date);
+  }
 }

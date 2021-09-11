@@ -23,19 +23,12 @@ public train={
 	 nonAcSittingCoach:'',
 	 totalAcSleeperSeat:'',	
 	 availAcSleeperSeat:'',
-
 	 totalAcSittingSeat:'',
-	 
    availAcSittingSeat:'',
-	 
    totalNonAcSleeperSeat:'',
-	 
    availNonAcSleeperSeat:'',
-	 
    totalNonAcSittingSeat:'',
-	 
    availNonAcSittingSeat:''
-
 }
   ngOnInit(): void {
   }
@@ -45,7 +38,6 @@ formSubmit(){
   alert("sclicked")
   console.log(this.train)
   this.trainService.addTrain(this.train).subscribe(
-
     (data:any)=>{
       alert("submited")
       console.log(data);
