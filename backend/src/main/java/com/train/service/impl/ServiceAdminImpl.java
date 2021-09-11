@@ -9,12 +9,16 @@ import org.springframework.stereotype.Service;
 
 import com.train.model.TrainDetails;
 import com.train.repository.AdminDao;
+import com.train.repository.RouteDao;
 import com.train.service.ServiceAdmin;
 
 @Service
 public class ServiceAdminImpl implements ServiceAdmin {
     @Autowired
     private AdminDao admindao;
+    @Autowired
+    private RouteDao routedao;
+    
 	@Override
 	public TrainDetails createTrain(TrainDetails traindetails) {
 		return admindao.save(traindetails);
