@@ -24,7 +24,9 @@ public class ControllerAdmin {
 	@Autowired
 	private ServiceAdmin serviceAdmin;
 	
-	//methods//
+	
+/////////////////Train////////////////////////////////
+
 	@PostMapping("/add")
 	public TrainDetails createCustomer(@RequestBody TrainDetails traindetails) {
 		TrainDetails cs = this.serviceAdmin.createTrain(traindetails);
@@ -49,5 +51,10 @@ public class ControllerAdmin {
 	public List<TrainDetails> getTrainByDate(@PathVariable Date date) {
 		return this.serviceAdmin.getTrainByDate(date);
 	}
-
+	
+/////////////////Route////////////////////////////////
+	@GetMapping("/route/all/{startpoint}/{lastpoint}")
+	public List<TrainDetails> getAllTrainsByroute(@PathVariable("startpoint") String startpoint,@PathVariable("lastpoint")String lastpoint) {
+		return this.serviceAdmin.getAllTrainsByRoute(startpoint,lastpoint);
+	}
 }
