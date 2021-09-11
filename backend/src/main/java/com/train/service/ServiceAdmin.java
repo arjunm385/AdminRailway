@@ -4,6 +4,7 @@ import java.sql.Date;
 import java.util.List;
 import java.util.Optional;
 
+import com.train.model.RouteDetails;
 import com.train.model.TrainDetails;
 
 public interface ServiceAdmin {
@@ -17,5 +18,7 @@ public interface ServiceAdmin {
 	
 	public List<TrainDetails> getTrainByDate(Date date);
 
-	public List<TrainDetails> getAllTrainsByRoute(String startpoint, String lastpoint);
+	public List<RouteDetails> getAllTrainsByRoute(String startpoint, String lastpoint);
+
+	public List<RouteDetails> getAllTrainsByRouteDate(String start, String end, Date date);
 }

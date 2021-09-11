@@ -7,6 +7,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.train.model.RouteDetails;
 import com.train.model.TrainDetails;
 import com.train.repository.AdminDao;
 import com.train.repository.RouteDao;
@@ -41,9 +42,13 @@ public class ServiceAdminImpl implements ServiceAdmin {
 	public List<TrainDetails> getTrainByDate(Date date) {
 		return admindao.getTrainByDate(date);
 	}
+//////////////////////////route/////////////////
 	@Override
-	public List<TrainDetails> getAllTrainsByRoute(String startpoint, String lastpoint) {
-		return routedao.getTrain(lastpoint, lastpoint);
-	}
-
+	  public List<RouteDetails> getAllTrainsByRoute(String startpoint, String lastpoint) {
+	    return routedao.getTrain(lastpoint, lastpoint);
+	  }
+	  @Override
+	  public List<RouteDetails> getAllTrainsByRouteDate(String start, String end, Date date) {
+	    return routedao.getTrainBydateloc(start, end, date);
+	  }
 }

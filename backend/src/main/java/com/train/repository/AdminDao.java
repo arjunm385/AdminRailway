@@ -14,7 +14,7 @@ import com.train.model.TrainDetails;
 public interface AdminDao extends JpaRepository<TrainDetails, Integer> {
 // 
 	@Query(value ="select * from train_details where tname=:n",nativeQuery=true)
-	public List<TrainDetails>getTrainByName(@Param("n") String name);
+	public List<TrainDetails> getTrainByName(@Param("n") String name);
 	
 	@Query(value ="select * from train_details where date =:d",nativeQuery=true)
 	public List<TrainDetails> getTrainByDate(@Param("d") Date date);
