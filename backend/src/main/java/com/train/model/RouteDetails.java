@@ -22,7 +22,7 @@ public class RouteDetails {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int routeid;
 	private String startpoint;
-	private String endpoint;
+//	private String endpoint;
 	private Date date;
 	private Time arrival;
 	private Time depart;
