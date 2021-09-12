@@ -24,7 +24,7 @@
 
   <!-- customers modal  -->
 <!-- large modal -->
-<div class="modal fade" id="customers">
+<div *ngIf="bool" class="modal fade" id="customers">
   <div class="modal-dialog modal-lg modal-dialog modal-dialog-scrollable">
     <div class="modal-content">
 
@@ -56,7 +56,7 @@
               <td>{{route.td.tno}}</td>
               <td> {{route.td.tname}} </td>
               <td> {{route.startpoint}} </td>
-              <td> {{route.endpoint}} </td>
+              <td> {{search.end}} </td>
               <td> {{route.arrival}} </td>
               <td> {{route.depart}} </td>
               <td> {{route.date}} </td>
@@ -83,4 +83,5 @@
     </div>
   </div>
 </div>
+
 <!-- end modal  -->

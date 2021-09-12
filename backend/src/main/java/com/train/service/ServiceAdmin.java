@@ -21,4 +21,6 @@ public interface ServiceAdmin {
 	public List<RouteDetails> getAllTrainsByRoute(String startpoint, String lastpoint);
 
 	public List<RouteDetails> getAllTrainsByRouteDate(String start, String end, Date date);
+	
+	public int getTrainBydatelocdis(String startpoint, int trainid);
 }

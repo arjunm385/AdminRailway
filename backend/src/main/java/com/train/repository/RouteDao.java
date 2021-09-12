@@ -19,5 +19,7 @@ public interface RouteDao extends JpaRepository<RouteDetails, Integer> {
 	  @Query(value ="select  * from route_details where startpoint=:start and td_tid in (select td_tid from route_details where startpoint=:end) and date=:date ",nativeQuery=true)
 	  public List<RouteDetails>getTrainBydateloc(@Param("start") String startpoint,@Param("end") String lastpoint,@Param("date") Date date);
 
+	  @Query(value = "select  distance from route_details where startpoint=:start and td_tid=:trainid  ", nativeQuery = true)
+	  public int  getTrainBydatelocdis(@Param("start") String startpoint,@Param("trainid") int trainid);
 }
 

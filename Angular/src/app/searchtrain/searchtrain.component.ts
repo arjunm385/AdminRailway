@@ -17,16 +17,19 @@ public search={
  end:'',
  date:''
 }
+bool:boolean=true;
   ngOnInit(): void {
   }
 
   searchtrain(){
 this.service.searchTrain(this.search).subscribe(
   (Response:any)=>{
+    // this.bool=true
     console.log(Response)
     this.routedetails=Response
   },
   (err:any)=>{
+    window.location.reload();
     alert("error")
   });
   }
