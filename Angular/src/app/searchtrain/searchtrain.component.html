@@ -25,7 +25,7 @@
   <!-- customers modal  -->
 <!-- large modal -->
 <div *ngIf="bool" class="modal fade" id="customers">
-  <div class="modal-dialog modal-lg modal-dialog modal-dialog-scrollable">
+  <div class="modal-dialog modal-xl modal-dialog modal-dialog-scrollable">
     <div class="modal-content">
 
       <!-- Modal Header -->
@@ -49,6 +49,8 @@
               <th>arrival</th>
               <th>departure</th>
               <th>date</th>
+              <th>Destintion Time</th>
+              <th>Distance</th>
               <th>BOOK</th>
           </thead>
           <tbody class="text-center">
@@ -60,10 +62,10 @@
               <td> {{route.arrival}} </td>
               <td> {{route.depart}} </td>
               <td> {{route.date}} </td>
+              <td> {{route.interval}} </td>
+              <td> {{route.gap}} </td>
               <td>
-                <a class="btn-primary" aria-label="Example icon button with a home icon" >
-                 BOOK
-                </a>
+                <button class="btn btn-primary">Book</button>
               </td>
              <!--  <td> <a mat-mini-fab color="warn" data-toggle="modal" data-target="#deletecust"
                   (click)="getcustidfromedit(cust.userid,cust.countryCode,cust.userPassword)"

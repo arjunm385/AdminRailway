@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TrainformComponent } from './trainform/trainform.component';
 import { SearchtrainComponent } from './searchtrain/searchtrain.component';
+import { AddrouteComponent } from './addroute/addroute.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TrainformComponent,
-    SearchtrainComponent
+    SearchtrainComponent,
+    AddrouteComponent
   ],
   imports: [
     BrowserModule,

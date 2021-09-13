@@ -17,6 +17,7 @@ public search={
  end:'',
  date:''
 }
+
 bool:boolean=true;
   ngOnInit(): void {
   }

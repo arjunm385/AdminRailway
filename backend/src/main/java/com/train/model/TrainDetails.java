@@ -23,7 +23,7 @@ public class TrainDetails {
 	private String tname;	 
 	private String start; 
 	private String stop;
-
+	
 	private Date date;	//take care of format
 	
 	private int totalCoach;	 
@@ -40,7 +40,6 @@ public class TrainDetails {
 	private int totalNonAcSittingSeat;
 	private int availNonAcSittingSeat;
 
-	
 }
 
 

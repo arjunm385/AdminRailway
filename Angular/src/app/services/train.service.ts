@@ -16,4 +16,13 @@ export class TrainService {
     console.log("service layer"+search)
     return this.https.get(`http://localhost:8787/train/route/all/`+search.start+`/`+search.end+`/`+search.date);
   }
+  public addRoute(route:any){
+    console.log(route)
+    return this.https.post(`http://localhost:8787/train/addroute`,route);
+  }
+
+  searchRoute(id:any){
+    console.log("Id : "+id)
+    return this.https.get(`http://localhost:8787/train/route/get/`+id);
+  }
 }
