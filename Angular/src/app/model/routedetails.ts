@@ -6,6 +6,7 @@ export class routedetails{
 	// endpoint:string='';
 	date:any='';
 	arrival:any='';
+	arrival1:any='';
 	depart:any='';
 	gap:any=''; //transient
 	interval:any=''; //transient

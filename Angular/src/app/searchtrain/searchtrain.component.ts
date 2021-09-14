@@ -26,8 +26,10 @@ bool:boolean=true;
 this.service.searchTrain(this.search).subscribe(
   (Response:any)=>{
     // this.bool=true
+    localStorage.setItem("source",this.search.start);
     console.log(Response)
     this.routedetails=Response
+
   },
   (err:any)=>{
     window.location.reload();

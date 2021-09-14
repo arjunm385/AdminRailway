@@ -16,6 +16,7 @@ export class AddrouteComponent implements OnInit {
     routeid:'',
     startpoint:'',
     arrival:'',
+    arrival1:'',
     depart:'',
     date:'',
     station:'',

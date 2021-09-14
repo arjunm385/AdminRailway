@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { TrainformComponent } from './trainform/trainform.component';
 import { SearchtrainComponent } from './searchtrain/searchtrain.component';
 import { AddrouteComponent } from './addroute/addroute.component';
+import { DemoComponent } from './demo/demo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TrainformComponent,
     SearchtrainComponent,
-    AddrouteComponent
+    AddrouteComponent,
+    DemoComponent
   ],
   imports: [
     BrowserModule,
