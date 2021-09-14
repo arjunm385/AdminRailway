@@ -1,6 +1,9 @@
 package com.train.controller;
 
 import java.sql.Date;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.Optional;
 
@@ -13,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.train.model.Booking;
 import com.train.model.RouteDetails;
 import com.train.model.TrainDetails;
 import com.train.service.ServiceAdmin;
@@ -67,7 +71,13 @@ public class ControllerAdmin {
 		return this.serviceAdmin.getAllTrainsByRouteDate(start, end, date);
 	    }
 	@PostMapping("/addroute")
-	  public RouteDetails createRoute(@RequestBody RouteDetails routedetails) {
+	  public RouteDetails createRoute(@RequestBody RouteDetails routedetails) throws ParseException {
+//		routedetails.setArrival((Date)routedetails.getArrival1());
+//		DateFormat formatter = new SimpleDateFormat("hh:mm:ss");
+//		routedetails.setArrival((Date)formatter.parse(routedetails.getArrival1()));
+//		routedetails.setArrival(java.sql.Time.valueOf(routedetails.getArrival1()));
+//		routedetails.setArrival(java.sql.Time.valueOf("10:30:54"));
+		System.out.println(routedetails.getArrival1());
 	    return this.serviceAdmin.createRoute(routedetails);
 	  }
 	
@@ -77,4 +87,10 @@ public class ControllerAdmin {
 	    return this.serviceAdmin.getByRoute(id);
 	    
 	  }
+	
+	///////////////////booking/////////////////
+	@PostMapping("/book")
+	public Booking book(@RequestBody Booking booking) {		
+		return this.serviceAdmin.book(booking);
+	}
 }

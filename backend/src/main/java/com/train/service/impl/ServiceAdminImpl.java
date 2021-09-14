@@ -9,6 +9,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.train.model.Booking;
 import com.train.model.RouteDetails;
 import com.train.model.TrainDetails;
 import com.train.repository.AdminDao;
@@ -21,6 +22,8 @@ public class ServiceAdminImpl implements ServiceAdmin {
 	private AdminDao admindao;
 	@Autowired
 	private RouteDao routedao;
+	@Autowired
+	private com.train.repository.BookingDao bookDao;
 
 	@Override
 	public TrainDetails createTrain(TrainDetails traindetails) {
@@ -85,5 +88,10 @@ public class ServiceAdminImpl implements ServiceAdmin {
 	public List<RouteDetails> getByRoute(int id) {
 		return routedao.getRoutebyTrainid(id);
 		}
+
+	@Override
+	public Booking book(Booking booking) {
+		return bookDao.save(booking);
+	}
 
 }

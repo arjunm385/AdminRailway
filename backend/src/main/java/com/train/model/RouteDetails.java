@@ -20,7 +20,7 @@ import lombok.Data;
 public class RouteDetails {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue
 	private int routeid;
 	private String startpoint;
 //	private String endpoint;
@@ -35,5 +35,7 @@ public class RouteDetails {
 	private int gap;
 	@Transient
 	private Time interval;
+	@Transient
+	private String arrival1;
 	
 }

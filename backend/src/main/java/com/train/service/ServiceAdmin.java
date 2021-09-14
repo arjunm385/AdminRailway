@@ -4,6 +4,7 @@ import java.sql.Date;
 import java.util.List;
 import java.util.Optional;
 
+import com.train.model.Booking;
 import com.train.model.RouteDetails;
 import com.train.model.TrainDetails;
 
@@ -25,5 +26,7 @@ public interface ServiceAdmin {
 	public RouteDetails createRoute(RouteDetails routedetails);
 
 	public List<RouteDetails> getByRoute(int id);
+
+	public Booking book(Booking booking);
 
 }
